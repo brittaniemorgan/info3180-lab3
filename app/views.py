@@ -30,7 +30,7 @@ def contact():
         msg = Message(subject, sender=(name, email), recipients=["testinbox@gmail.com"], body=message)
         msg.html = f"<p>{msg.body}</p>"
         mail.send(msg)        
-        flash('Your message has been successfully submitted.', 'success')
+        flash('Your email has been successfully sent.', 'success')
         return redirect(url_for('home')) 
     return render_template('contact.html', form=form)
 
