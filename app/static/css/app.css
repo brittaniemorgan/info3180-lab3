@@ -1,3 +1,15 @@
 body {
     padding-top: 5rem;
 }
+
+.error-message{
+    color: red;
+}
+
+.flashes {
+    list-style-type: none;
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding: 15px;
+  }
