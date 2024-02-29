@@ -1,10 +1,10 @@
 
 from flask_wtf import FlaskForm
 from wtforms import StringField, TextAreaField
-from wtforms.validators import InputRequired, DataRequired, Email
+from wtforms.validators import InputRequired, DataRequired, Email, Regexp
 
 class ContactForm(FlaskForm):
-    name = StringField('name', validators=[DataRequired()])
-    email = StringField('email', validators=[DataRequired(), Email()])
-    subject = StringField('subject', validators=[DataRequired()])
-    message = TextAreaField('message', validators=[DataRequired()])
+    name = StringField('Name', validators=[DataRequired(), Regexp('^[A-Za-z ]+$')])
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    subject = StringField('Subject', validators=[DataRequired()])
+    message = TextAreaField('Message', validators=[DataRequired()])
